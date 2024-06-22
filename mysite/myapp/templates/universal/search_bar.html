@@ -1,0 +1,9 @@
+<div class="search-bar">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+                {{ form_f.as_p }}
+
+        <button type="submit">Wyszukaj</button>
+    </form>
+</div>

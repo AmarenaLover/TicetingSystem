@@ -1,0 +1,33 @@
+<div class="userHeader">
+    <p class="col1">ID</p>
+    <p class="col2">Imię i nazwisko</p>
+    <p class="col3">Login</p>
+    <p class="col4">Dane kontaktowe</p>
+    <p class="col5">Uprawnienia</p>
+    <p class="col6"></p>
+    <p class="col7"></p>
+    <p class="col8"></p>
+</div>
+<div class="userRecord">
+    {% for record in users %}
+    <div class="userRecordS">
+        <p class="col1">{{record.userID}}</p>
+        <p class="col2">{{record.userFirstName}} {{record.userLastName}}</p>
+        <p class="col3">{{record.userLogin}}</p>
+        <p class="col4">{{record.userPhoneNumber}}</p>
+        <p class="col5">
+            {% if record.userRole == 0 %}
+            Konto wyłączone
+            {% elif record.userRole == 1 %}
+            Użytkownik
+            {% elif record.userRole == 2 %}
+            Administrator
+            {% endif %}</p>
+        <p class="col6">
+            <a href="{{record.userID}}">
+                <button class="buttonEdit">Edytuj</button></a></p>
+    </div>
+    {% endfor %}
+</div>
+
+

@@ -1,0 +1,35 @@
+<div class="ticketHeader">
+    <p class="col1">ID</p>
+    <p class="col2">Tytuł</p>
+    <p class="col3">Data zgłoszenia</p>
+    <p class="col4">Status</p>
+    <p class="col5">Przypisany serwisant</p>
+    <p class="col6">Zgłaszający</p>
+    <p class="col7"></p>
+</div>
+<div class="ticketRecord">
+    {% for ticket in tickets %}
+    <div class="ticketRecordS">
+        <p class="col1">{{ ticket.ticketID }}</p>
+        <p class="col2">{{ ticket.ticketTitle }}</p>
+        <p class="col3">{{ ticket.ticketCreationDate }}</p>
+        <p class="col4">
+            {% if ticket.ticketStatus == 0 %}
+            Niezrealizowane
+            {% elif ticket.ticketStatus == 1 %}
+            Zrealizowane
+            {% endif %}</p>
+        <p class="col5">
+            {% if ticket.ticketTechnician %}
+            {{ ticket.ticketTechnician.userFirstName }} {{ ticket.ticketTechnician.userLastName }}
+            {% else %}
+            Brak
+            {% endif %}</p>
+        <p class="col6">{{ ticket.ticketCreator.userFirstName }} {{ ticket.ticketCreator.userLastName }}</p>
+        <p class="col7"><a href="{{ticket.ticketID}}">
+            <button class="buttonDetails">Zobacz szczegóły</button>
+        </a></p>
+    </div>
+    {% endfor %}
+</div>
+

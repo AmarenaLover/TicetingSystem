@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First webpage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'myapp/style2.css'%}">
+</head>
+<body>
+
+    <div class="logWindow">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="buttonLogin">Zaloguj</button>
+        </form>
+        {% if messages %}
+        {% for message in messages %}
+        <br>
+            <label> {{ message }} </label>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+</body>

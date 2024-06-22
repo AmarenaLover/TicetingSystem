@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top-fixed {
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    background-color: #696969; /* Optional: Background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    z-index: 2; /* Ensure the top bar is above other content */
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.side-fixed {
+    flex: 0 0 200px; /* Fixed width for the sidebar */
+    height: calc(100vh - 50px); /* Full height minus the height of the top bar */
+    background-color: #e9ecef; /* Optional: Background color */
+    padding: 10px; /* Optional: Padding */
+    text-align: center; /* Center text */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;}
+
+a:link { text-decoration: none; }
+
+.greeting, .item{
+    background-color: transparent;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 18px;
+    font-family: Arial;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.item:hover { background-color: rgba(0, 0, 0, 0.1); }
+
+input, textarea{ /* [type=text] [type=password] [type=submit] */
+    padding: 5px 5px; /* Margines wew */
+    margin: 5px 0px; /* Margines zew */
+    border: 1px solid #696969; /* Styl krawedziw */
+    border-radius: 4px; /* Krzywizna krawedzi */
+    background-color: #FFFFFF; /* Kolor tla */
+
+    font-family: Arial; /* Czcionka */
+    font-size: 14px; /* Rozmiar czcionki */
+    color: #696969; /* Kolor czcionki */
+}
+
+label, ul, li, p{
+    font-family: Arial;
+    font-size: 16px;
+    color: #696969;
+}
+
+button, select, option{
+    padding: 5px 20px;
+    background-color: #ffffff;
+    color: #696969;
+    border-radius: 4px; /* Krzywizna krawedzi */
+    border: 1px solid #696969; /* Optional: Background color */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+checkbox{
+    background-color: #ffffff;
+    color: #696969;
+    border-radius: 4px; /* Krzywizna krawedzi */
+    border: 1px solid #696969; /* Optional: Background color */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover{ background-color: rgba(0, 0, 0, 0.1); }
+
+.buttonEdit, .buttonArchive, .buttonDelete{ width: 100px; }
+
+.buttonEdit:hover{ background-color: rgba(0, 255, 0, 0.3); }
+
+.buttonArchive:hover { background-color: rgba(255, 255, 0, 0.3); }
+
+.buttonDelete:hover{ background-color: rgba(255, 0, 0, 0.3); }
+
+table, th, td {border: 0px solid;}
+
+.ticketHeader{
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    margin: 0px;
+    padding: 5px 10px; /* Optional: Padding */
+    background-color: #f8f9fa; /* Optional: Background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    z-index: 1; /* Ensure the top bar is above other content */
+    display: flex;
+    text-align: center; /* Center text */
+    .col1{width: 50px;}
+    .col2{width: 300px;}
+    .col3{width: 150px;}
+    .col4{width: 150px;}
+    .col5{width: 200px;}
+    .col6{width: 200px;}
+    .col7{width: 200px;}
+}
+
+.ticketRecord{
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling for the content */
+    }
+
+.ticketRecordS{
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    margin: 0px;
+    background-color: #f8f9fa; /* Optional: Background color */
+    padding: 0px 10px; /* Optional: Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    z-index: 1; /* Ensure the top bar is above other content */
+    text-align: center; /* Center text */
+    display: flex;
+    box-sizing: border-box;
+    .col1{width: 50px;}
+    .col2{width: 300px;}
+    .col3{width: 150px;}
+    .col4{width: 150px;}
+    .col5{width: 200px;}
+    .col6{width: 200px;}
+    .col7{width: 200px;}
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.userHeader{
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    margin: 0px;
+    background-color: #f8f9fa; /* Optional: Background color */
+    padding: 5px 10px; /* Optional: Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    z-index: 1; /* Ensure the top bar is above other content */
+    display: flex;
+    text-align: center; /* Center text */
+    .col1{width: 50px;}
+    .col2{width: 250px;}
+    .col3{width: 250px;}
+    .col4{width: 250px;}
+    .col5{width: 250px;}
+    .col6{width: 200px;}
+}
+
+.userRecord{
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling for the content */
+    }
+
+.userRecordS{
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    margin: 0px;
+    background-color: #f8f9fa; /* Optional: Background color */
+    padding: 0px 10px; /* Optional: Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    z-index: 1; /* Ensure the top bar is above other content */
+    text-align: center; /* Center text */
+    display: flex;
+    box-sizing: border-box;
+    .col1{width: 50px;}
+    .col2{width: 250px;}
+    .col3{width: 250px;}
+    .col4{width: 250px;}
+    .col5{width: 250px;}
+    .col6{width: 200px;}
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+
+.logWindow, .ticketCreation{
+    position: absolute; /* Pozycja klasy */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Pozycja klasy */
+    padding: 20px 20px;
+    border: 1px solid #696969;
+    background: #e9ecef;
+    border-radius: 4px; /* Krzywizna krawedzi */
+    text-align: center;
+}
+
+.ticketCreation{
+    width: 700px;
+    textarea{
+        width: 640px;
+        resize: none;
+    }
+    input{
+        width: 640px;
+    }}
+
+.logWindow{ width: 310px;}
+
+.ticketDetails{
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling for the content */
+    textarea{
+        margin: 2px;
+        height:50px;
+        width: 96%;
+        resize: none;
+    }
+}
+
+.ticketDetailsHeader{
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    margin: 0px;
+    padding: 5px 10px; /* Optional: Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    background-color: #f8f9fa; /* Optional: Background color */
+    z-index: 1; /* Ensure the top bar is above other content */
+}
+
+.ticketDetailsS{
+    flex: 0 0 50px; /* Fixed height for the top bar */
+    width: 100%;
+    margin: 0px;
+    padding: 5px 10px; /* Optional: Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+    background-color: #ffffff; /* Optional: Background color */
+    box-sizing: border-box;
+}
+
+.formData{
+    padding: 0px 5px 15px 5px;
+    margin: 10px 10px;
+    border: 1px solid #696969;
+    width: 400px;
+    background: #e9ecef;
+    border-radius: 4px; /* Krzywizna krawedzi */
+    text-align: center;
+    align-items: center;
+    button, select, option{
+    width: 200px;
+    }
+    input{
+    width: 190px;
+    }
+    select:hover, option:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+.content-mid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    height:50px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 5px 20px;
+    background-color: rgba(255, 0, 0, 0.3);    color: #696969;
+    border-radius: 4px; /* Krzywizna krawedzi */
+    border: 1px solid #696969; /* Optional: Background color */
+    text-align: center;
+    align-items: center;
+    }
+
+    select, option{
+    width: 187px;
+
+    select:hover, option:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+}

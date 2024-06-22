@@ -1,0 +1,14 @@
+  <div class="group">
+    <a class="greeting"> Witaj {{username}} </a>
+  </div>
+  <div class="group">
+    <a class="item" href="{% url 'create_ticket' %}" >Nowe zgłoszenie</a>
+    <a class="item" href="{% url 'display_tickets' %}">Zgłoszenia</a>
+    {% if role == 2 %}
+    <a class="item" href="{% url 'display_users' %}">Użytkownicy</a>
+    <a class="item" href="{% url 'create_user' %}">Nowy użytkownik</a>
+    {% else %}
+    {% endif %}
+    <a class="item" href="{% url 'display_my_profile' %}">Moje konto</a>
+    <a class="item" href="{% url 'logout' %}">Wyloguj</a>
+  </div>

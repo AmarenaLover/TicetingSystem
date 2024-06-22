@@ -1,0 +1,19 @@
+{% for ticket in ticket_detail %}
+<p><a href="{% url 'close_ticket' ticket.ticketID %}">
+    <button class="buttonDelete">Zamknij zgłoszenie</button>
+</a></p>
+{% if role == 2 %}
+<select onchange="location.href=this.value;">
+    <option>Przypisz zgłoszenie</option>
+    <option value="{% url 'asign_ticket' ticket.ticketID 0 %}">Brak</option>
+    {% for admin in admins %}
+    <option value="{% url 'asign_ticket' ticket.ticketID admin.userID %}">{{admin.userFirstName}} {{admin.userLastName}}</option>
+    {% endfor %}
+</select>
+    {% else %}
+    {% endif %}
+<p><a href="{% url 'open_ticket' ticket.ticketID %}">
+    <button class="buttonEdit">Otwórz zgłoszenie</button>
+</a></p>
+{% endfor %}
+

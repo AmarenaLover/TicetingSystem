@@ -1,0 +1,65 @@
+<div class="formData">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+            <tr>
+                <td width="150"><p>Imię</p></td>
+                <td>{{form1.userFirstName}}</td>
+            </tr>
+            <tr>
+                <td><p>Nazwisko</p></td>
+                <td>{{form1.userLastName}}</td>
+            </tr>
+            <tr>
+                <td><p>Kontakt</p></td>
+                <td>{{form1.userPhoneNumber}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="buttonLogin">Zapisz zmiany</button>
+    </form>
+</div>
+
+<div class="formData">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+            <tr>
+                <td width="150"><p>Hasło</p></td>
+                <td>{{form2.userPassword}}</td>
+            </tr>
+            <tr>
+                <td><p>Powtórz hasło</p></td>
+                <td>{{form2.userPasswordRepeat}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="buttonLogin">Zapisz zmiany</button>
+    </form>
+</div>
+
+{% if my_profile %}
+<div class="formData" style="opacity: 0.5; pointer-events: none;">
+{% else %}
+<div class="formData">
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+            <tr>
+                <td width="150"><p>Login</p></td>
+                <td>{{form3.userLogin}}</td>
+            </tr>
+            <tr>
+                <td><p>Uprawnienia</p></td>
+                <td>{{form3.userRole}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="buttonLogin">Zapisz zmiany</button>
+    </form>
+</div>
+

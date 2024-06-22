@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First webpage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'myapp/style2.css'%}">
+</head>
+<body>
+
+<div class="top-fixed">
+    {% include 'universal/options_bar.html' %}
+</div>
+<div class="wrapper">
+    <div class="content-mid">
+        {% include 'user_related/list_user_details.html' %}
+    </div>
+        {% include 'universal/errors.html' %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<div class="ticketCreation">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody style="text-align: left;">
+            <tr>
+                <td width="60"><p>Tytuł</p></td>
+                <td width="640" class="createTicketTitle">{{ form.ticketTitle }}</td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td><p>Opis</p></td>
+                <td class="createTicketDesc">{{ form.ticketDescription }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="buttonLogin">Zgłoś problem</button>
+    </form>
+</div>

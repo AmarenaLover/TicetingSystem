@@ -1,0 +1,40 @@
+<div class="formData">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+            <tr>
+                <td width="150"><p>Imię</p></td>
+                <td>{{form.userFirstName}}</td>
+            </tr>
+            <tr>
+                <td><p>Nazwisko</p></td>
+                <td>{{form.userLastName}}</td>
+            </tr>
+            <tr>
+                <td><p>Kontakt</p></td>
+                <td>{{form.userPhoneNumber}}</td>
+            </tr>
+            <tr>
+                <td><p>Login</p></td>
+                <td>{{form.userLogin}}</td>
+            </tr>
+            <tr>
+                <td><p>Uprawnienia</p></td>
+                <td>{{form.userRole}}</td>
+            </tr>
+            <tr>
+                <td><p>Hasło</p></td>
+                <td>{{form.userPassword}}</td>
+            </tr>
+            <tr>
+                <td><p>Powtórz hasło</p></td>
+                <td>{{form.userPasswordRepeat}}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Stwórz konto</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

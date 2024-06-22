@@ -1,0 +1,23 @@
+<!-- Tworzenie zgłoszeń -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'myapp/style2.css'%}">
+</head>
+<body>
+
+    <div class="top-fixed">
+        {% include 'universal/options_bar.html' %}
+    </div>
+    <div class="wrapper">
+        <div class="content">
+            {% include 'ticket_related/create_ticket_input.html' %}
+        </div>
+    </div>
+
+</body>
+</html>

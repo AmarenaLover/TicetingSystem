@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+}
+
+input{ /* [type=text] [type=password] [type=submit] */
+    padding: 5px 5px; /* Margines wew */
+    margin: 5px 0px; /* Margines zew */
+    border: 2px solid #696969; /* Styl krawedziw */
+    border-radius: 8px; /* Krzywizna krawedzi */
+    background-color: #FFFFFF; /* Kolor tla */
+
+    font-family: Arial; /* Czcionka */
+    font-size: 14px; /* Rozmiar czcionki */
+    color: #696969; /* Kolor czcionki */
+}
+
+label, ul, li, p{
+    font-family: Arial;
+    font-size: 16px;
+    color: #696969;
+}
+
+.logWindow{
+    position: absolute; /* Pozycja klasy */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Pozycja klasy */
+
+    padding: 20px 20px;
+    border: 2px solid #696969;
+    background: linear-gradient(90deg, #F0F0F0 0%, #878787 100%);
+    border-radius: 8px; /* Krzywizna krawedzi */
+
+    text-align: center;
+    width: 310px;
+}
+
+button{
+    padding: 5px 20px;
+    border: 2px solid #696969;
+    background-color: #F0F0F0;
+    border-radius: 8px; /* Krzywizna krawedzi */
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #878787;
+}
+
+.buttonLogin{
+    background-color: white;
+}
+
+.user{
+    padding: 5px 5px;
+    margin: 5px 0px 5px 0px;
+    border: 2px solid #696969;
+    background-color: #F0F0F0;
+    border-radius: 8px; /* Krzywizna krawedzi */
+    height: 30px;
+}
+
+.users{
+    margin-left: 200px;
+}
+
+
+
+.buttonEdit, .buttonArchive, .buttonDelete{
+    padding: 5px 5px;
+    border: 2px solid #696969;
+    background-color: white;
+    border-radius: 8px; /* Krzywizna krawedzi */
+    width: 90px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttonEdit:hover{
+    background-color: #32ff2b;
+}
+
+.buttonArchive:hover{
+    background-color: #ffb12b;
+}
+
+.buttonDelete:hover{
+    background-color: #ff2b3d;
+}
+
+.data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 16px;
+    color: #696969;
+
+    width: auto;
+    height: 30px;
+    float: left;
+}
+
+.options{
+    margin: 1px 0px 0px 0px;
+    width: 278px;
+    height: 30px;
+    float: right;
+}
+
+.sidebar{
+    padding: 5px 20px;
+    border: 2px solid #696969;
+    background-color: white;
+    border-radius: 8px; /* Krzywizna krawedzi */
+
+    width: 190px;
+    position: fixed;
+    z-index: 1;
+    top: 160px;
+    left: 5px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+
+
+
+a:link { text-decoration: none; }
+
+.menu-bar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: #696969;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 2;
+}
+
+.item{
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 14px 20px;
+
+    font-family: Arial;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.item:hover { background-color: rgba(0, 0, 0, 0.1); }
+
+.greeting{
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    font-family: Arial;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.search-bar{
+position: fixed;
+  top: 50px; /* Adjust this value to match the height of the top bar */
+  left: 0;
+  width: 100px;
+  height: calc(100% - 50px); /* Adjust this value to match the height of the top bar */
+  background-color: #e9ecef; /* Optional: Background color */
+  padding: 10px; /* Optional: Padding */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-fixed {
+  flex: 0 0 50px; /* Fixed height for the top bar */
+  width: 100%;
+  background-color: #f8f9fa; /* Optional: Background color */
+  padding: 10px; /* Optional: Padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+  z-index: 1000; /* Ensure the top bar is above other content */
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.side-fixed {
+  flex: 0 0 100px; /* Fixed width for the sidebar */
+  height: calc(100vh - 50px); /* Full height minus the height of the top bar */
+  background-color: #e9ecef; /* Optional: Background color */
+  padding: 10px; /* Optional: Padding */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling for the content */
+  padding: 10px;
+}

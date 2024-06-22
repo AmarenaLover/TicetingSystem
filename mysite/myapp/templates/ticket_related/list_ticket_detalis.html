@@ -1,0 +1,46 @@
+{% for ticket in ticket_detail %}
+<div class="ticketDetailsHeader">
+    <p>ID Zgłoszenia: {{ ticket.ticketID }}</p>
+    <p>Tytuł: {{ ticket.ticketTitle }}</p>
+    <p>Opis: {{ ticket.ticketDescription }}</p>
+    <p>Data zgłoszenia: {{ ticket.ticketCreationDate }}</p>
+    <p>Status:
+        {% if ticket.ticketStatus == 0 %}
+        Niezrealizowane
+        {% elif ticket.ticketStatus == 1 %}
+        Zrealizowane
+        {% endif %}</p>
+    <p>Przydzielone do:
+        {% if ticket.ticketTechnician %}
+        {{ ticket.ticketTechnician.userFirstName }} {{ ticket.ticketTechnician.userLastName }}
+        {% else %}
+        -
+        {% endif %}
+    </p>
+    <p>Stworzone przez: {{ ticket.ticketCreator.userFirstName }} {{ ticket.ticketCreator.userLastName }}</p>
+</div>
+{% endfor %}
+
+<!--    https://stackoverflow.com/questions/18350630/multiplication-in-django-template-without-using-manually-created-template-tag-->
+<div class="ticketDetails">
+    {% for comment in ticket_comments %}
+    <div class="ticketDetailsS" style="z-index: {% widthratio forloop.counter 1 -1 %};">
+        <p>Komentarz: {{ comment.commentDescription }}</p>
+        <p>Data: {{ comment.commentCreationDate }}</p>
+        <p>Napisał: {{ comment.commentCreator.userFirstName }} {{ comment.commentCreator.userLastName }}</p>
+    </div>
+    {% endfor %}
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td width="100%">{{ form.commentContent }}</td>
+                    <td width="" class="createTicketTitle">
+                        <button type="submit">Dodaj komentarz</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
